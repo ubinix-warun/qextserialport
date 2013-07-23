@@ -245,14 +245,14 @@ void QextQmlSerialPort::setBaudRate(int baudrate)
    \li ExtSerialPort.DATA_5
    \endlist
 */
-QextQmlSerialPort::DataBitsType QextQmlSerialPort::dataBits()
+int QextQmlSerialPort::dataBits()
 {
-    return static_cast<QextQmlSerialPort::DataBitsType>(d_ptr->port->dataBits());
+    return static_cast<int>(d_ptr->port->dataBits());
 }
 
-void QextQmlSerialPort::setDataBits(QextQmlSerialPort::DataBitsType databits)
+void QextQmlSerialPort::setDataBits(int databits)
 {
-    d_ptr->port->setDataBits(static_cast<::DataBitsType>(databits));
+    d_ptr->port->setDataBits(static_cast<DataBitsType>(databits));
 }
 
 /*!
@@ -268,14 +268,14 @@ void QextQmlSerialPort::setDataBits(QextQmlSerialPort::DataBitsType databits)
    \li ExtSerialPort.PAR_SPACE
    \endlist
 */
-QextQmlSerialPort::ParityType QextQmlSerialPort::parity()
+int QextQmlSerialPort::parity()
 {
-    return static_cast<QextQmlSerialPort::ParityType>(d_ptr->port->parity());
+    return static_cast<int>(d_ptr->port->parity());
 }
 
-void QextQmlSerialPort::setParity(QextQmlSerialPort::ParityType parity)
+void QextQmlSerialPort::setParity(int parity)
 {
-    d_ptr->port->setParity(static_cast<::ParityType>(parity));
+    d_ptr->port->setParity(static_cast<ParityType>(parity));
 }
 
 /*!
@@ -288,14 +288,14 @@ void QextQmlSerialPort::setParity(QextQmlSerialPort::ParityType parity)
    \li ExtSerialPort.STOP_2
    \endlist
 */
-QextQmlSerialPort::StopBitsType QextQmlSerialPort::stopBits()
+int QextQmlSerialPort::stopBits()
 {
-    return static_cast<QextQmlSerialPort::StopBitsType>(d_ptr->port->stopBits());
+    return static_cast<int>(d_ptr->port->stopBits());
 }
 
-void QextQmlSerialPort::setStopBits(QextQmlSerialPort::StopBitsType stopbits)
+void QextQmlSerialPort::setStopBits(int stopbits)
 {
-    d_ptr->port->setStopBits(static_cast<::StopBitsType>(stopbits));
+    d_ptr->port->setStopBits(static_cast<StopBitsType>(stopbits));
 }
 
 /*!
@@ -309,12 +309,12 @@ void QextQmlSerialPort::setStopBits(QextQmlSerialPort::StopBitsType stopbits)
    \li ExtSerialPort.FLOW_XONXOFF    -   Software (XON/XOFF) flow control
    \endlist
 */
-QextQmlSerialPort::FlowType QextQmlSerialPort::flowControl()
+int QextQmlSerialPort::flowControl()
 {
-    return static_cast<QextQmlSerialPort::FlowType>(d_ptr->port->flowControl());
+    return static_cast<int>(d_ptr->port->flowControl());
 }
 
-void QextQmlSerialPort::setFlowControl(QextQmlSerialPort::FlowType flow)
+void QextQmlSerialPort::setFlowControl(int flow)
 {
-    d_ptr->port->setFlowControl(static_cast<::FlowType>(flow));
+    d_ptr->port->setFlowControl(static_cast<FlowType>(flow));
 }
